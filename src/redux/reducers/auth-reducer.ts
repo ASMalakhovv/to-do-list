@@ -61,16 +61,17 @@ export const authMe = (): ThunkType => async dispatch => {
         dispatch(setAppStatus('loading'))
         dispatch(setAppInitStatus(false))
         const result = await authAPI.me()
-
         if (result.resultCode === 0) {
             dispatch(setUserData(result.data.id, result.data.email, result.data.login))
             dispatch(setAppInitStatus(true))
             dispatch(setAppStatus('succeeded'))
         } else {
+            console.log('else')
             dispatch(setAppInitStatus(true))
             throwNewError(dispatch, result.messages[0])
         }
     } catch (err) {
+        console.log('catch')
         handlingError(dispatch, err)
     }
 }
