@@ -106,7 +106,6 @@ export const getTodolistsTC = (): ThunkType => async dispatch => {
         dispatch(setAppStatus('loading'))
 
         const data = await todolistAPI.getTodolists()
-        debugger
         if (data) {
 
             dispatch(setTodolistsAC(data))

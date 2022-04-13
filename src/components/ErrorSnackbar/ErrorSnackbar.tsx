@@ -1,6 +1,6 @@
-import React from "react";
+import React, {SyntheticEvent} from "react";
 import MuiAlert, {AlertProps} from "@mui/material/Alert";
-import Snackbar from "@mui/material/Snackbar";
+import Snackbar, { SnackbarCloseReason } from "@mui/material/Snackbar";
 import {useDispatch} from "react-redux";
 import {setAppError} from "../../redux/reducers/app-reducer";
 
@@ -13,7 +13,7 @@ export const ErrorSnackbar: React.FC<IProps> = props => {
     const {error} = props
     const dispatch = useDispatch()
 
-    const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
+    const handleClose = (event?: Event | SyntheticEvent<any, Event>, reason?: SnackbarCloseReason) => {
         if (reason === 'clickaway') {
             return;
         }
