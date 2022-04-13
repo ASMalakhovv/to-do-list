@@ -18,13 +18,13 @@ const Footer = () => {
                     <a className={styles.footer_box} href={'https://github.com/ASMalakhovv'}>
                         <BsGithub size={18}/>
                     </a>
-                    <a className={styles.footer_box} href={''}>
+                    <a className={styles.footer_box} href={'https://www.linkedin.com/in/aleksandr-malakhov-2a275a237'}>
                         <BsLinkedin size={18}/>
                     </a>
                 </div>
                 <div className={styles.footer_copyright}>
                     <span dangerouslySetInnerHTML={{"__html": "&copy;"}}/>
-                    <span>All rights reserved 2022</span>
+                    <span>All rights reserved 2021-2022</span>
                 </div>
             </div>
         </div>
