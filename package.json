@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://asmalakhovv.github.io/to-do-list/",
+  "homepage": "https://ASMalakhovv.github.io/to-do-list/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.5.0",
